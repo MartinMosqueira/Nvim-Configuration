@@ -17,6 +17,8 @@ Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
+"TMUX
+
 "CONFIGURACIONES BASICAS
 set number                "muestra los numeros de cada linea en la parte i
 set relativenumber                        "la distribucion de los numeros
@@ -39,7 +41,11 @@ let g:neosolarized_bold = 1
 let g:neosolarized_underline = 1
 let g:neosolarized_italic = 0
 
-set termguicolors         " activa true colors en la terminal
+if has(“termguicolors”)
+set termguicolors
+endif
+
+"set termguicolors         " activa true colors en la terminal
 set background=dark       " fondo del tema: dark/light
 colorscheme NeoSolarized  " activa tema NeoSolarized
 
